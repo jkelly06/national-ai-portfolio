@@ -6,168 +6,96 @@
     <title>National AI Infrastructure | Strategic Asset Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        :root {
+            --neon-blue: #60a5fa;
+            --deep-bg: #010409; 
+        }
+
         body { 
-            background-color: #020617; 
-            color: #f3f4f6; 
+            background-color: var(--deep-bg); 
+            color: #f0f6fc; 
             font-family: 'Inter', sans-serif;
+            margin: 0;
             scroll-behavior: smooth;
         }
+
         .hero-glow {
-            background: radial-gradient(circle at 50% -20%, #1e3a8a 0%, #020617 75%);
+            background: radial-gradient(circle at 50% -10%, #173b7a 0%, #010409 75%);
         }
-        .domain-badge {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid #1e293b;
-            background: rgba(15, 23, 42, 0.9);
+
+        .asset-card {
+            background: rgba(13, 17, 23, 0.95);
+            border: 1px solid #30363d;
+            transition: all 0.2s ease-in-out;
         }
-        .domain-badge:hover {
-            border-color: #60a5fa;
-            background: rgba(30, 58, 138, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+
+        .asset-card:hover {
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 25px rgba(96, 165, 250, 0.2);
+            transform: translateY(-2px);
         }
-        .glow-text-blue {
-            text-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+
+        .glow-text {
+            text-shadow: 0 0 15px rgba(96, 165, 250, 0.7);
         }
-        @keyframes pulse-soft {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.85; transform: scale(1.01); }
+
+        .btn-primary {
+            background-color: #238636;
+            transition: all 0.2s;
         }
-        .verify-pulse {
-            animation: pulse-soft 4s infinite ease-in-out;
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+            box-shadow: 0 0 20px rgba(46, 160, 67, 0.4);
+        }
+
+        .container-main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
         }
     </style>
 </head>
 <body class="hero-glow min-h-screen">
 
-    <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-xl font-black tracking-tighter text-white uppercase italic">National AI Infrastructure</div>
-        <div class="hidden md:block text-[10px] font-mono text-blue-400 uppercase tracking-[0.3em] bg-blue-900/30 px-5 py-2 rounded-full border border-blue-500/40">
+    <nav class="container-main py-10 flex justify-between items-center">
+        <div class="text-xl font-black uppercase tracking-tighter italic text-white">National AI Infrastructure</div>
+        <div class="hidden md:block text-[10px] font-bold text-blue-400 border border-blue-900/50 px-4 py-2 rounded-full bg-blue-950/20 tracking-widest uppercase">
             Sovereign Asset Management • 2026
         </div>
     </nav>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20">
+    <div class="container-main py-12 md:py-20">
         
         <section class="text-center mb-24">
-            <h1 class="text-6xl md:text-8xl font-black mb-8 tracking-tight leading-tight text-white uppercase">
-                National AI <br><span class="text-blue-400 glow-text-blue">Assets</span>
+            <h1 class="text-6xl md:text-8xl font-black uppercase tracking-tight mb-6 text-white leading-tight">
+                National AI <br><span class="text-blue-400 glow-text">Assets</span>
             </h1>
-            <p class="text-gray-300 text-lg md:text-2xl max-w-3xl mx-auto mb-12 font-light italic leading-relaxed">
-                "Direct acquisition of category-defining infrastructure for Sovereign AI deployment."
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                Strategic naming architecture for state-level neural networks and secure compute grids. Direct acquisition of category-defining infrastructure.
             </p>
-
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="national_ai_prospectus.pdf" target="_blank" class="w-full md:w-auto bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 px-10 rounded-xl flex items-center justify-center transition-all shadow-2xl shadow-blue-900/60">
-                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="national_ai_prospectus.pdf" target="_blank" class="btn-primary text-white font-bold py-5 px-10 rounded-xl uppercase text-xs tracking-widest w-full md:w-auto flex items-center shadow-lg">
+                    <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg>
                     DOWNLOAD 2026 PROSPECTUS
                 </a>
-                <a href="#contact" class="w-full md:w-auto text-gray-200 hover:text-white font-semibold py-5 px-10 border border-gray-700 rounded-xl hover:bg-gray-900 transition uppercase tracking-widest text-sm text-center">
+                <a href="#contact" class="text-gray-400 border border-gray-800 hover:bg-gray-900 font-bold py-5 px-10 rounded-xl uppercase text-xs tracking-widest w-full md:w-auto text-center">
                     Inquire for Acquisition
                 </a>
             </div>
         </section>
 
-        <section class="max-w-5xl mx-auto py-12 px-8 border border-blue-900/30 bg-slate-900/40 rounded-[2rem] mb-16 shadow-2xl backdrop-blur-md">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <div>
-                    <h2 class="text-[10px] uppercase tracking-[0.5em] text-blue-400 font-black mb-4">Strategic Briefing</h2>
-                    <p class="text-gray-200 text-sm leading-relaxed mb-6">
-                        As defense primes transition to <span class="text-white font-bold">National AI Factories</span>, authoritative naming architecture is a critical requirement. This 10-asset suite, managed by <span class="text-blue-400 font-bold uppercase tracking-wider">Principal John Kelly</span>, provides the primary infrastructure for Sovereign Neural Networks and Secure Federal Clouds.
-                    </p>
-                    <div class="flex items-center gap-6 text-[9px] text-gray-400 font-mono uppercase tracking-[0.2em]">
-                        <span class="flex items-center"><span class="w-2 h-2 bg-blue-400 rounded-full mr-2 shadow-[0_0_10px_rgba(96,165,250,1)]"></span>Sedo Premium Partner</span>
-                        <span class="flex items-center"><span class="w-2 h-2 bg-green-400 rounded-full mr-2 shadow-[0_0_10px_rgba(74,222,128,1)]"></span>Escrow Verified</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-5 rounded-xl bg-black/60 border border-gray-800">
-                        <span class="text-[9px] uppercase tracking-widest text-gray-500 font-bold block mb-1 text-center">Asset Tiers</span>
-                        <div class="text-center font-black text-white text-2xl">$45k <span class="text-xs text-gray-500">— $85k</span></div>
-                    </div>
-
-                    <div class="p-5 rounded-xl bg-blue-900/20 border border-blue-500/50 relative shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-                        <div class="absolute -top-2 -right-2 bg-blue-500 text-[8px] font-black px-2 py-0.5 text-white uppercase rounded shadow-lg">Preferred</div>
-                        <span class="text-[9px] uppercase tracking-widest text-blue-400 font-bold block mb-1 text-center">Full Buyout</span>
-                        <div class="text-center font-black text-2xl text-white tracking-tighter">$485,000</div>
-                    </div>
-
-                    <div class="p-4 rounded-xl bg-black/60 border border-gray-800 col-span-2 flex justify-between items-center px-6">
-                        <div class="text-[10px] font-bold text-white uppercase tracking-tight">Direct Wire / Escrow.com</div>
-                        <div class="text-[10px] font-black text-green-400 tracking-[0.2em] border border-green-900/50 px-2 py-1 bg-green-950/20 rounded uppercase">Savings 15%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-32">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaineural.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaifactory.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaisecure.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaiproject.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaiedge.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaistack.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaifabric.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaigrid.com</div>
-                <div class="domain-badge p-7 rounded-2xl text-center font-mono text-lg text-white font-bold tracking-tight">nationalaimesh.com</div>
-            </div>
-            
-            <div class="mt-8 p-8 rounded-2xl bg-blue-900/10 border border-blue-400/50 text-center font-mono text-2xl text-blue-400 w-full shadow-[0_0_30px_rgba(59,130,246,0.2)] glow-text-blue font-black tracking-tight">
-                nationalcfe.com
-            </div>
-        </section>
-
-        <section id="contact" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start pt-20 border-t border-gray-800">
-            
-            <div class="p-10 md:p-14 rounded-[2.5rem] bg-gray-900/30 border border-gray-800 shadow-2xl">
-                <h3 class="text-4xl font-black mb-4 text-white uppercase tracking-tight">Acquisition Portal</h3>
-                <p class="text-gray-400 mb-10 leading-relaxed text-sm">Initiate secure transfer protocols for individual assets or full portfolio buyout.</p>
-                
-                <form action="https://formspree.io/f/xjgpeoal" method="POST" class="space-y-6">
-                    <input type="email" name="email" required placeholder="contact@agency.gov" 
-                        class="w-full bg-black/60 border border-gray-800 p-5 rounded-xl focus:outline-none focus:border-blue-500 transition text-white placeholder-gray-700">
-                    <textarea name="message" rows="4" required placeholder="Detail inquiry parameters..." 
-                        class="w-full bg-black/60 border border-gray-800 p-5 rounded-xl focus:outline-none focus:border-blue-500 transition text-white placeholder-gray-700"></textarea>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-black py-5 rounded-xl hover:bg-blue-500 transition-all uppercase tracking-[0.3em] text-xs">
-                        Initiate Secure Transfer
-                    </button>
-                </form>
-            </div>
-
-            <div class="flex flex-col items-center text-center space-y-16 lg:pt-12">
-                <div>
-                    <p class="text-gray-500 uppercase tracking-[0.5em] text-[10px] mb-6 font-black">Primary Secure Channel</p>
-                    <a href="mailto:ceall06@proton.me" class="text-2xl md:text-4xl font-black text-white hover:text-blue-400 transition border-b-4 border-blue-900/50 pb-2 glow-text-blue tracking-tighter">
-                        ceall06@proton.me
-                    </a>
-                </div>
-
-                <div class="relative py-12 verify-pulse">
-                    <div class="absolute inset-0 bg-blue-500/10 rounded-full blur-3xl"></div>
-                    <div class="relative inline-block p-12 border border-blue-500/40 rounded-full bg-blue-900/10 shadow-[0_0_60px_-15px_rgba(59,130,246,0.4)]">
-                        <svg class="w-24 h-24 text-blue-400 mx-auto filter drop-shadow-[0_0_10px_rgba(96,165,250,0.5)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <p class="mt-8 text-[11px] font-black text-blue-400 uppercase tracking-[0.5em] glow-text-blue">Principal: John Kelly</p>
-                </div>
-            </div>
-
-        </section>
-    </main>
-
-    <footer class="py-24 text-center border-t border-gray-900">
-        <p class="text-gray-700 text-[10px] tracking-[0.5em] uppercase font-black">
-            &copy; 2026 National AI Infrastructure Asset Group. Sovereign Asset Management.
-        </p>
-    </footer>
-
-</body>
-</html>
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-slate-900/40 p-10 rounded-3xl border border-blue-900/20 mb-20 shadow-xl backdrop-blur-sm">
+            <div>
+                <h2 class="text-[10px] font-black text-blue-500 uppercase tracking-[0.4em] mb-4">Strategic Briefing</h2>
+                <p class="text-gray-200 text-sm leading-relaxed">
+                    Managed by **Principal John Kelly**, this turnkey portfolio establishes a dominant "Category King" position within the federal AI deployment sector.
+                </p>
+                <div class="flex items-center gap-4 mt-6 text-[9px] text-gray-500 font-mono uppercase tracking-[0.2em]">
+                    <span class="flex items-center"><span class="w-2 h-2 bg-blue-500 rounded-full mr-
            
                 
                 
