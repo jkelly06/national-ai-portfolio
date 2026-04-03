@@ -27,7 +27,7 @@
             background: radial-gradient(circle at 50% -10%, #173b7a 0%, #010409 85%); 
         }
 
-        /* --- FIXED: Asset Card Readability --- */
+        /* --- Asset Card Visibility --- */
         .asset-card { 
             background: rgba(13, 17, 23, 0.95) !important; 
             border: 1px solid #30363d !important; 
@@ -46,6 +46,23 @@
             box-shadow: 0 0 25px rgba(96, 165, 250, 0.25); 
             transform: translateY(-2px); 
             color: #ffffff !important; 
+        }
+
+        /* --- FIXED: Preferred Buyout Tag --- */
+        .buyout-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #3b82f6; /* Solid Blue */
+            color: #ffffff !important;
+            font-size: 10px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 8px 16px; /* Added padding so text doesn't hit edges */
+            border-bottom-left-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
         }
 
         .glow-text { text-shadow: 0 0 15px rgba(96, 165, 250, 0.7); }
@@ -95,15 +112,16 @@
             </div>
             <div class="flex flex-col justify-center items-center">
                 <div class="bg-black/40 p-10 rounded-xl border border-gray-800 text-center relative overflow-hidden w-full shadow-2xl">
-                    <div class="absolute -top-2 -right-2 bg-blue-500 text-[8px] font-black px-4 py-1 text-white uppercase rounded shadow-lg">Preferred Buyout</div>
-                    <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest">Full Portfolio Tier</span>
-                    <div class="text-4xl font-black text-white mt-2 tracking-tighter">$485,000</div>
+                    <div class="buyout-tag">Preferred Buyout</div>
+                    
+                    <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest block mt-4">Full Portfolio Tier</span>
+                    <div class="text-5xl font-black text-white mt-2 tracking-tighter">$485,000</div>
                     <p class="text-[10px] text-blue-400 mt-2 uppercase font-bold tracking-widest">Institutional Infrastructure</p>
                 </div>
             </div>
         </section>
 
-        <section class="mb-32 px-4 md:px-0">
+        <section class="mb-32">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-5">
                 <div class="asset-card p-8 rounded-xl text-lg">nationalaineural.com</div>
                 <div class="asset-card p-8 rounded-xl text-lg">nationalaifactory.com</div>
@@ -119,7 +137,6 @@
             <div class="bg-green-950/10 border-2 border-green-500/50 p-10 rounded-xl text-center shadow-[0_0_40px_rgba(34,197,94,0.15)]">
                 <span class="text-green-400 font-black text-3xl font-bold tracking-tight uppercase glow-text">nationalcfe.com</span>
                 <p class="text-[11px] text-green-300 uppercase tracking-[0.4em] mt-4 font-black">Carbon Free Energy & Environment</p>
-                <p class="text-[10px] text-green-500/70 uppercase tracking-widest mt-2">The Sustainable Foundation for National AI Compute</p>
             </div>
         </section>
 
@@ -129,7 +146,7 @@
                 <form action="https://formspree.io/f/YOUR_ID" method="POST" class="space-y-5 text-sm">
                     <input type="email" name="email" required placeholder="Institutional Email" class="w-full bg-black/60 border border-gray-800 p-5 rounded-xl focus:border-blue-500 outline-none text-white">
                     <textarea name="message" required placeholder="Specify acquisition intent..." rows="4" class="w-full bg-black/60 border border-gray-800 p-5 rounded-xl focus:border-blue-500 outline-none text-white"></textarea>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-black py-5 rounded-xl uppercase tracking-[0.3em] text-xs hover:bg-blue-500 shadow-xl active:scale-95 transition-all">Initiate Acquisition</button>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-black py-5 rounded-xl uppercase tracking-[0.3em] text-xs hover:bg-blue-500 shadow-xl transition-all">Initiate Acquisition</button>
                 </form>
             </div>
 
@@ -149,8 +166,3 @@
     <footer class="text-center py-10 opacity-30 text-[9px] uppercase tracking-[0.3em] font-black border-t border-gray-900 text-white">&copy; 2026 National AI Infrastructure Asset Group</footer>
 </body>
 </html>
-            
-     
-
-     
-               
