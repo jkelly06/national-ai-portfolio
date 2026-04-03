@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National AI Infrastructure | Carbon Free Energy Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@1,900&display=swap');
         :root { --neon-blue: #60a5fa; --deep-bg: #010409; }
@@ -23,19 +24,11 @@
         .glow-text { text-shadow: 0 0 15px rgba(96, 165, 250, 0.7); }
         .container-main { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-        /* Signature Styling */
         .signature-font { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; letter-spacing: -1px; }
         
-        /* QR Code Container */
-        .qr-placeholder {
-            border: 2px dashed #30363d;
-            background: rgba(255,255,255,0.03);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
+        /* QR Code Styling */
+        #qrcode img { margin: 0 auto; border: 4px solid white; border-radius: 4px; }
+        
         input:-webkit-autofill {
             -webkit-text-fill-color: white !important;
             -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
@@ -57,7 +50,7 @@
             
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 px-10 rounded-xl uppercase text-xs tracking-widest w-full md:w-auto shadow-lg">Initiate Acquisition</a>
-                <a href="YOUR_SEDO_LINK" target="_blank" class="text-blue-400 border border-blue-900/50 hover:bg-blue-900/20 font-bold py-5 px-10 rounded-xl uppercase text-xs tracking-widest w-full md:w-auto flex items-center justify-center">Verify on Sedo</a>
+                <a href="https://sedo.com/search/details/?domain=nationalaineural.com" target="_blank" class="text-blue-400 border border-blue-900/50 hover:bg-blue-900/20 font-bold py-5 px-10 rounded-xl uppercase text-xs tracking-widest w-full md:w-auto flex items-center justify-center">Verify on Sedo</a>
             </div>
         </section>
 
@@ -77,11 +70,9 @@
                     <span class="text-[9px] text-gray-500 uppercase font-black tracking-widest">Buyout Tier</span>
                     <div class="text-xl font-black text-white mt-1 tracking-tighter">$485,000</div>
                 </div>
-                <div class="qr-placeholder p-4 rounded-xl">
-                    <div class="w-16 h-16 border border-gray-700 bg-black flex items-center justify-center mb-2">
-                        <span class="text-[8px] text-gray-600 text-center uppercase px-2 font-black">Scan for Mobile Portal</span>
-                    </div>
-                    <span class="text-[8px] text-blue-400 uppercase font-black">Institutional Access</span>
+                <div class="p-4 rounded-xl border border-dashed border-gray-700 bg-black/50 flex flex-col items-center">
+                    <div id="qrcode" class="mb-2"></div>
+                    <span class="text-[8px] text-blue-400 uppercase font-black">Scan to Verify Portal</span>
                 </div>
             </div>
         </section>
@@ -102,7 +93,7 @@
             <div class="bg-green-950/10 border-2 border-green-500/50 p-10 rounded-xl text-center shadow-[0_0_40px_rgba(34,197,94,0.15)]">
                 <span class="text-green-400 font-black text-3xl font-bold tracking-tight uppercase glow-text">nationalcfe.com</span>
                 <p class="text-[11px] text-green-300 uppercase tracking-[0.4em] mt-4 font-black">Carbon Free Energy & Environment</p>
-                <p class="text-[10px] text-green-500/70 uppercase tracking-widest mt-2">The Sustainable Foundation for National AI Compute</p>
+                <p class="text-[10px] text-green-500/70 uppercase tracking-widest mt-2">Sustainable Foundation for National AI Compute</p>
             </div>
         </section>
 
@@ -118,11 +109,7 @@
 
             <div class="text-center">
                 <p class="text-gray-500 uppercase tracking-[0.3em] text-[10px] mb-4 font-black">Authorized by Principal</p>
-                
-                <div class="text-5xl md:text-7xl text-white signature-font mb-4 glow-text tracking-tighter">
-                    John Kelly
-                </div>
-                
+                <div class="text-5xl md:text-7xl text-white signature-font mb-4 glow-text tracking-tighter">John Kelly</div>
                 <p class="text-blue-500 text-xs mt-2 font-mono uppercase tracking-[0.3em]">ceall06@proton.me</p>
                 
                 <div class="mt-16 flex flex-col items-center">
@@ -134,12 +121,25 @@
             </div>
         </section>
     </div>
+
+    <script>
+        new QRCode(document.getElementById("qrcode"), {
+            text: "https://nationalaineural.com",
+            width: 80,
+            height: 80,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+    </script>
+
     <footer class="text-center py-10 opacity-30 text-[9px] uppercase tracking-[0.3em] font-black border-t border-gray-900 text-white">&copy; 2026 National AI Infrastructure Asset Group</footer>
 </body>
 </html>
-        
-      
-    
+       
+              
+
+            
      
 
      
